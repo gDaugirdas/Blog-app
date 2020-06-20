@@ -1,0 +1,56 @@
+// Base components
+@import './stylesheets/partials/variables.scss';
+@import './stylesheets/partials/colors.scss';
+@import './stylesheets/partials/typography.scss';
+@import './stylesheets/partials/global.scss';
+@import './stylesheets/partials/animations.scss';
+
+// Other
+@import './stylesheets/components/other/sticky-bar.scss';
+@import './stylesheets/components/other/headings.scss';
+@import './stylesheets/components/other/checkbox.scss';
+@import './stylesheets/components/other/button.scss';
+@import './stylesheets/components/other/socialmedia-icons.scss';
+@import './stylesheets/components/other/crossmark.scss';
+@import './stylesheets/components/other/back-link.scss';
+
+// Header
+@import './stylesheets/components/header/header-container.scss';
+@import './stylesheets/components/header/header-logo.scss';
+@import './stylesheets/components/header/flash-messages.scss';
+
+// Navigation
+@import './stylesheets/components/navigation/burger.scss';
+@import './stylesheets/components/navigation/nav.scss';
+
+// Footer
+@import './stylesheets/components/footer/footer.scss';
+
+// Index page
+@import './stylesheets/components/index/index-content.scss';
+
+// Gallery page
+@import './stylesheets/components/gallery-page/gallery.scss';
+@import './stylesheets/components/gallery-page/gallery-overlay.scss';
+
+// About page
+@import './stylesheets/components/about-page/about-heading.scss';
+@import './stylesheets/components/about-page/about-virtues.scss';
+@import './stylesheets/components/about-page/about-author.scss';
+
+// Blog page
+@import './stylesheets/components/blog-page/blog-header.scss';
+@import './stylesheets/components/blog-page/blog-content.scss';
+@import './stylesheets/components/blog-page/blog-suggested.scss';
+@import './stylesheets/components/blog-page/blog-comments.scss';
+@import './stylesheets/components/blog-page/blog-edit-button-container.scss';
+
+// 404 page
+@import './stylesheets/components/404/404.scss';
+
+// Forms
+@import './stylesheets/components/forms/blog.scss';
+@import './stylesheets/components/forms/image.scss';
+@import './stylesheets/components/forms/comment.scss';
+@import './stylesheets/components/forms/subscription.scss';
+@import './stylesheets/components/forms/login-register.scss';

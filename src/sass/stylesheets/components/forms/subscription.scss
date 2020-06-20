@@ -1,0 +1,45 @@
+.subscription {
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&-input {
+			margin-bottom: 1.5rem;
+			text-align: center;
+			border: 0.1rem solid #000;
+			font-family: 'Montserrat', sans-serif;
+			width: 35rem;
+			height: 5rem;
+			font-size: $base-font-size;
+		}
+	}
+
+	&__heading {
+		text-align: center;
+		font-size: 3.4rem;
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+	}
+
+	@include medium {
+		&__heading {
+			font-size: 3rem;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+	}
+
+	@include small {
+		&__form {
+			&-input {
+				width: 100%;
+			}
+		}
+		&__heading {
+			font-size: 2.6rem;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+	}
+}

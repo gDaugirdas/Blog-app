@@ -1,0 +1,19 @@
+<%- include("partials/header") %>
+
+<main>
+	<div class="login--container container">
+		<h1 class="tertiary__heading">Registracija</h1>
+		<form action="/register" method="POST" class="login__form">
+			<input type="text" name="username" placeholder="Prisijungimo ID" class="login__text-input" required
+				oninvalid="this.setCustomValidity('Šis laukas negali būti tuščias')"
+				oninput="this.setCustomValidity('')" />
+			<input type="password" name="password" placeholder="Slaptažodis" class="login__text-input" required
+				oninvalid="this.setCustomValidity('Šis laukas negali būti tuščias')"
+				oninput="this.setCustomValidity('')" />
+			<input type="text" name="adminCode" placeholder="Administratoriaus kodas" class="login__text-input" />
+			<button type="submit" class="button">Registruotis</button>
+		</form>
+	</div>
+</main>
+
+<%- include("partials/footer") %>

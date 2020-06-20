@@ -1,0 +1,21 @@
+<% if(blog.comments.length !== 0){ %>
+<h3 class="tertiary__heading">Komentarai</h3>
+<% } %> <% blog.comments.forEach(comment => { %>
+<div class="comment__body--container">
+    <div class="comment__body">
+        <p class="comment__name"><%= comment.author %></p>
+        <p class="comment__text"><%= comment.body %></p>
+        <p class="comment__date">
+            <%= moment(comment.created).locale("Lt").format('LLL') %>
+        </p>
+    </div>
+    <% if(currentUser && currentUser.isAdmin) { %>
+    <div class="comment__delete-form--container">
+        <form class="comment__delete-form" method="POST"
+            action="/blog/<%= blog._id %>/<%= comment._id %>/?_method=DELETE">
+            <button class="button" type="submit">Ištrinti</button>
+        </form>
+    </div>
+    <% } %>
+</div>
+<% }) %>

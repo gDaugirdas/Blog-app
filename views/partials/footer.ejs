@@ -1,0 +1,38 @@
+<footer>
+    <form class="subscription__form container" action="/email" method="POST">
+        <h2 class="tertiary__heading">Prenumeruok tinklaraštį</h2>
+        <input class="subscription__form-input" type="text" name="email[email]" placeholder="Elektroninis paštas">
+        <div class="checkbox--container container">
+            <span class="checkbox-input--container">
+                <input type="checkbox" class="checkbox" required
+                    oninvalid="this.setCustomValidity('Norint prenumeruoti sutikimas gauti pranešimus yra būtinas')"
+                    oninput="this.setCustomValidity('')">
+                <span class="checkbox__checkmark"></span>
+            </span>
+            <span class="checkbox__label">Sutinku gauti pranešimus apie naujai įkeltus tinkralaščio įrašus</span>
+        </div>
+        <button class="button" type="submit">Prenumeruoti</button>
+    </form>
+
+    <div class="footer__socialmedia--container">
+        <%- include('./socialmedia-links.ejs') %>
+    </div>
+    <div class="footer__main--container">
+        <div class="footer__main">
+            <span class="footer__main-credits">Designed and produced by <a class="footer__main-credits-link"
+                    href="https://www.linkedin.com/in/gediminasdaugirdas/">Daugirdas (LinkedIn)</a></span>
+            <% if(!currentUser) {%>
+            <a class="footer__main-link" href="/login">Login (Admin)</a>
+            <% } else {%>
+            <a class="footer__main-link" href="/logout">Logout</a>
+            <% } %>
+            <span class="footer__main-copyright">&#169 KOALA Blog 2020</span>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="/js/script.min.js"></script>
+
+</body>
+
+</html>

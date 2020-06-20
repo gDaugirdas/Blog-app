@@ -1,0 +1,32 @@
+<%- include("../partials/header.ejs") %>
+
+<main>
+	<%- include("../partials/blog-page/blog-header") %>
+	<section class="blog__content--container container">
+		<%- blog.body %>
+		<%- include("../partials/sticky-bar") %>
+	</section>
+
+	<%- include("../partials/blog-page/blog-edit") %>
+
+	<div class="comment--container container">
+		<%- include("../partials/blog-page/blog-comments") %>
+	</div>
+
+	<div class="new__comment--container container">
+		<%- include("../partials/blog-page/blog-new-comment") %>
+		<div class="new__comment-icon--container">
+			<%- include("../partials/icons/feather") %>
+		</div>
+	</div>
+
+	<%- include("../partials/back-link") %>
+
+	<% if (blogs.length > 0) { %>
+	<div class="blog__suggested--container container">
+		<%- include("../partials/blog-page/blog-suggested") %>
+	</div>
+	<% } %>
+</main>
+
+<%- include("../partials/footer.ejs") %>

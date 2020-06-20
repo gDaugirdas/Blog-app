@@ -1,0 +1,35 @@
+.header {
+	display: flex;
+	align-items: center;
+	background-color: $color-background-main;
+	height: 9.2rem;
+	border-bottom: thick double $color-black;
+
+	&--container {
+		margin: 0 auto;
+		width: calc(136rem + (2 * 4rem));
+		padding-right: 4rem;
+		padding-left: 4rem;
+	}
+
+	&__content {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@include medium {
+		&--container {
+			width: 100%;
+		}
+	}
+
+	@include small {
+		height: 7rem;
+
+		&--container {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+	}
+}

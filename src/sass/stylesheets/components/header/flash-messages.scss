@@ -1,0 +1,40 @@
+.flash {
+	&__message {
+		padding: 2rem;
+		font-size: $base-font-size;
+		background-color: $color-flash-error;
+		border-radius: 0.3rem;
+		word-wrap: break-word;
+
+		&--container {
+			width: 32%;
+			padding-top: 2rem;
+			text-align: center;
+			animation: flashMessageHide 0.5s ease-in 15s forwards;
+		}
+
+		&--error {
+			background-color: $color-flash-error;
+		}
+
+		&--success {
+			background-color: $color-flash-success;
+		}
+	}
+
+	@include medium {
+		&__message {
+			&--container {
+				width: 50%;
+			}
+		}
+	}
+
+	@include small {
+		&__message {
+			&--container {
+				width: 100%;
+			}
+		}
+	}
+}

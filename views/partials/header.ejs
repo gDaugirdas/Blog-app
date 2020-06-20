@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+
+	<title><%= pageTitle %></title>
+	<meta name="description" content="<%= pageDescription %>">
+	<meta name="keywords" content="Koala, Blogas, Tinklaraštis">
+	<meta name="robots" content="index,follow">
+	<meta property="og:title" content="<%= pageTitle %>">
+	<meta property="og:description" content="<%= pageDescription %>">
+	<meta property="og:image" content="<%= ogImage %>">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Koala Blog">
+	<meta charset="UTF-8" />
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" type="text/css" href="/styles/app.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+	<header class="header">
+		<div class="header--container container">
+			<div class="header__content">
+				<a href="/blogs" class="header__logo--container">
+					<%- include('./icons/koala') %>
+					<div class="header__logo-text">
+						<span class="header__logo-text-primary">KOALA</span>
+						<span class="header__logo-text-secondary">BLOG</span>
+					</div>
+				</a>
+				<nav class="nav">
+					<button aria-expanded="false" type="button" class="burger">
+						<%- include('./icons/burger') %>
+					</button>
+					<ul class="nav__menu">
+						<li class="nav__menu-item">
+							<a class="nav__menu-link" href="/">TINKLARAŠTIS</a>
+						</li>
+						<li class="nav__menu-item">
+							<a class="nav__menu-link" href="/gallery">GALERIJA</a>
+						</li>
+						<li class="nav__menu-item">
+							<a class="nav__menu-link" href="/about">APIE</a>
+						</li>
+						<div class="nav__socialmedia--container">
+							<%- include('./socialmedia-links.ejs') %>
+						</div>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<% if (error && error.length > 0) { %>
+	<div class="flash__message--container container">
+		<p class="flash__message flash__message--error"><%= error %></p>
+	</div>
+	<% } %> <% if (success && success.length > 0) { %>
+	<div class="flash__message--container container">
+		<p class="flash__message flash__message--success"><%= success %></p>
+	</div>
+	<% } %>
+</body>
+
+</html>

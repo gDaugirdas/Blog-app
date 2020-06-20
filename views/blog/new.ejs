@@ -1,0 +1,82 @@
+<%- include("../partials/header.ejs") %>
+
+<main>
+	<div class="new__blog--container container">
+		<h1 class="secondary__heading">Sukurk naują tinklaraščio įrašą!</h1>
+		<form class="new__blog-form" action="/blogs" method="POST">
+			<div class="new__blog-intro--container">
+				<div class="new__blog-input--container">
+					<label class="new__blog-label">Tinklaraščio žyma</label>
+					<input class="new__blog-input" type="text" name="blog[tag]" required
+						oninvalid="this.setCustomValidity('Tinklaraščio žyma yra būtina')"
+						oninput="this.setCustomValidity('')" />
+				</div>
+				<div class="new__blog-input--container">
+					<label class="new__blog-label">Pagrindinio paveikslėlio adresas (URL)</label>
+					<input class="new__blog-input" type="text" name="blog[blogImage]" required
+						oninvalid="this.setCustomValidity('Pagrindinio paveikslėlio adresas yra būtinas')"
+						oninput="this.setCustomValidity('')" />
+				</div>
+				<div class="new__blog-input--container">
+					<label class="new__blog-label">Tinklaraščio pavadinimas</label>
+					<input class="new__blog-input" type="text" name="blog[title]" required
+						oninvalid="this.setCustomValidity('Tinklaraščio pavadinimas yra būtinas')"
+						oninput="this.setCustomValidity('')" />
+				</div>
+				<div class="new__blog-input--container">
+					<label class="new__blog-label">Pagrindinio paveikslėlio alternatyvus tekstas</label>
+					<input class="new__blog-input" type="text" name="blog[blogImageAlt]" required
+						oninvalid="this.setCustomValidity('Pagrindinio paveikslėlio alternatyvus tekstas yra būtinas')"
+						oninput="this.setCustomValidity('')" />
+				</div>
+				<div class="new__blog-input--container">
+					<label class="new__blog-label">Pavadinimo antraštė</label>
+					<input class="new__blog-input" type="text" name="blog[titleHeading]" required
+						oninvalid="this.setCustomValidity('Pavadinimo antraštė yra būtina')"
+						oninput="this.setCustomValidity('')" />
+				</div>
+			</div>
+			<div class="new__blog-body--container">
+				<label class="new__blog-label">Tinklaraščio tūrinys</label>
+				<textarea class="new__blog-textarea" name="blog[body]">
+<div class="blog__section">
+<h2 class="blog__subheading"></h2>
+<p class="blog__paragraph">
+
+</p>
+
+<div class="blog__image--primary">
+<img class="blog__image" src="(Paveikslėlio adresas)" alt="">
+</div>
+
+<p class="blog__paragraph"> 
+
+</p>
+</div>
+
+<div class="blog__section">
+<h2 class="blog__subheading"></h2>
+<p class="blog__paragraph"> 
+
+</p>
+    
+<div class="blog__image--right blog__image--secondary">
+<img class="blog__image" src="(Paveikslėlio adresas)" alt="">
+</div>
+
+<p class="blog__paragraph"> 
+
+</p>
+</div>
+
+
+
+            </textarea>
+			</div>
+
+			<button class="button" type="submit">Pridėti</button>
+		</form>
+	</div>
+</main>
+
+<%- include("../partials/footer.ejs") %>

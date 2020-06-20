@@ -1,0 +1,14 @@
+<% blogs.reverse().forEach(blog => { %>
+<article class="index__article">
+    <a class="index__article-link" href="/blogs/<%= blog._id %> ">
+        <img class="index__article-image" src="<%= blog.blogImage %>" alt="<%= blog.blogImageAlt %>" />
+        <div class="index__article-text--container">
+            <p class="index__article-tag"><%= blog.tag %></p>
+            <p class="index__article-name"><%= blog.title %></p>
+            <p class="index__article-date">
+                <%= moment(blog.created).locale("Lt").format('LL') %>
+            </p>
+        </div>
+    </a>
+</article>
+<% }) %>

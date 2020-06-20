@@ -1,0 +1,64 @@
+.about {
+	&__heading {
+		font-size: 9rem;
+		letter-spacing: 1rem;
+		color: $color-black;
+		text-align: center;
+		&--container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 4rem;
+		}
+
+		&-icon {
+			&-dash {
+				width: 25rem;
+				stroke: $color-black;
+			}
+		}
+	}
+
+	@include medium {
+		&__heading {
+			font-size: 7rem;
+			letter-spacing: 0.6rem;
+			&--container {
+				display: flex;
+				flex-direction: column-reverse;
+				padding-top: 4rem;
+			}
+			&-icon {
+				&-dash {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@include small {
+		&__heading {
+			font-size: 4rem;
+			letter-spacing: 0.3rem;
+			&--container {
+				padding-top: 3rem;
+			}
+		}
+	}
+}
+
+#book-icon {
+	fill: $color-black;
+}
+
+#border {
+	stroke: $color-black;
+}
+
+#checkmark-icon {
+	fill: $color-black;
+}
+
+#locator-dot {
+	fill: $color-black;
+}

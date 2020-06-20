@@ -1,0 +1,62 @@
+.new {
+	&__image {
+		&--container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 4rem;
+		}
+
+		&-input {
+			height: 4rem;
+			padding: 0 0.5rem;
+			font-size: $base-font-size;
+			&--container {
+				display: flex;
+				flex-direction: column;
+				width: 59rem;
+
+				&:last-of-type {
+					padding-bottom: 4rem;
+				}
+			}
+		}
+
+		&-form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+		}
+
+		&-label {
+			font-size: 2rem;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+		}
+
+		&-button {
+			width: 35rem;
+			height: 4rem;
+			background-color: $color-black;
+			color: $color-white;
+			border: 0;
+			font-family: 'Montserrat', sans-serif;
+			font-size: $base-font-size;
+			letter-spacing: 0.2rem;
+		}
+	}
+
+	@include small {
+		&__image {
+			&-input {
+				&--container {
+					width: 100%;
+				}
+			}
+			&-button {
+				width: 25rem;
+			}
+		}
+	}
+}

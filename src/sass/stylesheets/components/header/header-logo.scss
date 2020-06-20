@@ -1,0 +1,68 @@
+.header {
+	&__logo {
+		margin-right: 0.6rem;
+		width: 7rem;
+
+		&--container {
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+			color: $color-black;
+			cursor: pointer;
+		}
+
+		&-text {
+			display: flex;
+			flex-direction: column;
+
+			&-primary {
+				font-size: 5.2rem;
+				position: relative;
+				top: 0.5rem;
+			}
+
+			&-secondary {
+				font-size: 2.8rem;
+				position: relative;
+				left: 10.5rem;
+				bottom: 1rem;
+				width: 6rem;
+			}
+		}
+
+		@include medium {
+			width: 6.5rem;
+			margin-right: 0.3rem;
+
+			&-text {
+				&-primary {
+					font-size: 4.8rem;
+					top: 0.3rem;
+				}
+
+				&-secondary {
+					font-size: 2.4rem;
+					left: 10.3rem;
+				}
+			}
+		}
+
+		@include small {
+			width: 5rem;
+			margin-right: 0.2rem;
+
+			&-text {
+				&-primary {
+					font-size: 3.8rem;
+					top: 0.2rem;
+				}
+
+				&-secondary {
+					font-size: 1.8rem;
+					bottom: 0.8rem;
+					left: 8.4rem;
+				}
+			}
+		}
+	}
+}

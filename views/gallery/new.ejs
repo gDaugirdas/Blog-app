@@ -1,0 +1,38 @@
+<%- include("../partials/header.ejs") %>
+
+<main>
+	<div class="new__image--container container">
+		<h1 class="secondary__heading">Įkelk naują galerijos nuotrauką</h1>
+		<form class="new__image-form" action="/gallery" method="POST">
+			<div class="new__image-input--container">
+				<label class="new__image-label">Paveikslėlio adresas</label>
+				<input
+					class="new__image-input"
+					type="text"
+					name="gallery[image]"
+					required
+					oninvalid="this.setCustomValidity('Paveikslėlio adresas yra būtinas')"
+					oninput="this.setCustomValidity('')"
+				/>
+			</div>
+			<div class="new__image-input--container">
+				<label class="new__image-label">Alternatyvus paveikslėlio apibūdinimas</label>
+				<input
+					class="new__image-input required"
+					type="text"
+					name="gallery[imageAlt]"
+					required
+					oninvalid="this.setCustomValidity('Alternatyvus paveikslėlio apibūdinimas yra būtinas')"
+					oninput="this.setCustomValidity('')"
+				/>
+			</div>
+			<div class="new__image-input--container">
+				<label class="new__image-label">Paveikslėlio antraštė</label>
+				<input class="new__image-input" type="text" name="gallery[imageHeading]" />
+			</div>
+			<button class="button" type="submit">Pridėti</button>
+		</form>
+	</div>
+</main>
+
+<%- include("../partials/footer.ejs") %>

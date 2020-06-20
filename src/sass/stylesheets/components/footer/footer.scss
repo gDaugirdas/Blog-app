@@ -1,0 +1,40 @@
+.footer {
+	&__main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		height: 12rem;
+		color: $color-white;
+
+		&--container {
+			width: 100%;
+			height: 20rem;
+			background-color: $color-black;
+			text-align: center;
+		}
+
+		&-link {
+			text-decoration: none;
+			color: $color-white;
+		}
+
+		&-credits {
+			&-link {
+				text-decoration: none;
+				color: #8495bc;
+			}
+		}
+	}
+
+	&__socialmedia {
+		&--container {
+			display: flex;
+			justify-content: space-evenly;
+			width: 24rem;
+			margin: 0 auto;
+			padding-bottom: 3rem;
+			padding-top: 3rem;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.sticky-bar {
+	position: absolute;
+	top: 0;
+	left: -1.5rem;
+	bottom: 2.2rem;
+	transition: opacity 0.2s ease-in;
+
+	&--blog {
+		left: -14.5rem;
+	}
+
+	@include medium {
+		display: none;
+	}
+}
+
+.links {
+	&--container {
+		left: 0;
+		top: 12em;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: sticky;
+	}
+}

@@ -1,0 +1,37 @@
+<h2 class="tertiary__heading">Kiti tinklaraščio įrašai</h2>
+<% if (blogs.length >= 4) { %>
+<div class="blog__suggested-article--container">
+    <% helpers.shuffle(blogs).slice(0,4).forEach(blog => { %>
+    <article class="blog__suggested-article">
+        <a class="blog__suggested-article-link" href="/blogs/<%= blog._id %> ">
+            <img class="blog__suggested-article-image" src="<%= blog.blogImage %>" alt="<%= blog.blogImageAlt %>" />
+            <div class="blog__suggested-article-text--container">
+                <p class="blog__suggested-article-tag"><%= blog.tag %></p>
+                <p class="blog__suggested-article-name"><%= blog.title %></p>
+                <p class="blog__suggested-article-date">
+                    <%= moment(blog.created).locale("Lt").format('LL') %>
+                </p>
+            </div>
+        </a>
+    </article>
+    <% }) %>
+</div>
+<% } %> <% if (blogs.length < 4) { %>
+<div class="blog__suggested-article-special--container">
+    <% helpers.shuffle(blogs).slice(0,4).forEach(blog => { %>
+    <article class="blog__suggested-article">
+        <a class="blog__suggested-article-link" href="/blogs/<%= blog._id %> ">
+            <img class="blog__suggested-article-image" src="<%= blog.blogImage %>" alt="<%= blog.blogImageAlt %>" />
+            <div class="blog__suggested-article-text--container">
+                <p class="blog__suggested-article-tag"><%= blog.tag %></p>
+                <p class="blog__suggested-article-name"><%= blog.title %></p>
+                <p class="blog__suggested-article-date">
+                    <%= moment(blog.created).locale("Lt").format('LL') %>
+                </p>
+            </div>
+        </a>
+    </article>
+    <% }) %>
+</div>
+
+<% } %>

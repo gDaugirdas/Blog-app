@@ -1,0 +1,5 @@
+<% images.reverse().forEach(image => { %>
+<a href="#<%= image._id %>" class="gallery__image--container">
+	<img class="gallery__image" loading="lazy" src="<%= image.image %>" alt="<%= image.imageAlt %>" />
+</a>
+<% }) %>

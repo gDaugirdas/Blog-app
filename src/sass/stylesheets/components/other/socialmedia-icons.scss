@@ -1,0 +1,26 @@
+.socialmedia {
+	&-link {
+		padding: 1rem 0;
+
+		&--footer {
+			padding: 0 1.5rem;
+		}
+	}
+
+	&-icon {
+		width: 5.5rem;
+		height: 5.5rem;
+		fill: $color-black;
+	}
+
+	@include small {
+		&-icon {
+			width: 5rem;
+			height: 5rem;
+		}
+
+		&-link {
+			padding: 0.8rem 0;
+		}
+	}
+}

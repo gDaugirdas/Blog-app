@@ -1,0 +1,8 @@
+<% if(currentUser && currentUser.isAdmin) { %>
+<div class="blog__edit--container container">
+    <a class="button" href="/blogs/<%= blog._id %>/edit">Redaguoti</a>
+    <form class="blog__edit-form" method="POST" action="/blogs/<%= blog._id %>?_method=DELETE">
+        <button class="button" type="submit">Ištrinti</button>
+    </form>
+</div>
+<% } %>

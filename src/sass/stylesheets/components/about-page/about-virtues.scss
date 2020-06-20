@@ -1,0 +1,68 @@
+.about {
+	&__virtues {
+		&--container {
+			display: flex;
+			align-items: center;
+			padding-top: 8rem;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__virtue {
+		&--container {
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 26rem;
+		}
+
+		&-heading {
+			font-weight: $font-weight-bold;
+			padding-top: 1.6rem;
+			font-size: 2.2rem;
+		}
+
+		&-paragraph {
+			font-size: $paragraph-font-size;
+			padding-top: 1.2rem;
+		}
+
+		&-icon {
+			height: 13rem;
+		}
+	}
+
+	@include medium {
+		&__virtues {
+			&--container {
+				justify-content: center;
+				padding-top: 6rem;
+			}
+		}
+
+		&__virtue {
+			&--container {
+				margin: 2rem;
+			}
+			&-icon {
+				height: 12rem;
+			}
+		}
+	}
+
+	@include small {
+		&__virtues {
+			&--container {
+				justify-content: center;
+				padding-top: 4rem;
+			}
+		}
+		&__virtue {
+			&-icon {
+				height: 11rem;
+			}
+		}
+	}
+}

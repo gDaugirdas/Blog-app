@@ -1,0 +1,18 @@
+<%- include("partials/header") %>
+
+<main>
+	<div class="primary__heading--container container">
+		<h1 class="primary__heading">
+			Gražaus gyvenimo akimirkos
+		</h1>
+		<% if(currentUser && currentUser.isAdmin) { %>
+		<a class="button" href="/gallery/new">Pridėti naują nauotrauką</a>
+		<% } %>
+	</div>
+	<div class="gallery--container container">
+		<%- include('partials/gallery-page/gallery-image') %>
+		<%- include('partials/gallery-page/gallery-overlay') %>
+	</div>
+</main>
+
+<%- include("partials/footer") %>

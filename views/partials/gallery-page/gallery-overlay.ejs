@@ -1,0 +1,34 @@
+<% images.reverse().forEach(image => { %>
+<a href="#_" id="<%= image._id %>" class="overlay">
+	<?xml version="1.0" encoding="UTF-8"?>
+	<svg
+		class="crossmark"
+		enable-background="new 0 0 22.88 22.88"
+		version="1.1"
+		viewBox="0 0 22.88 22.88"
+		xml:space="preserve"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path
+			d="m0.324 1.909c-0.429-0.429-0.429-1.143 0-1.587 0.444-0.429 1.143-0.429 1.587 0l9.523 9.539 9.539-9.539c0.429-0.429 1.143-0.429 1.571 0 0.444 0.444 0.444 1.159 0 1.587l-9.523 9.524 9.523 9.539c0.444 0.429 0.444 1.143 0 1.587-0.429 0.429-1.143 0.429-1.571 0l-9.539-9.539-9.523 9.539c-0.444 0.429-1.143 0.429-1.587 0-0.429-0.444-0.429-1.159 0-1.587l9.523-9.539-9.523-9.524z"
+		/>
+	</svg>
+
+	<img class="overlay__image" src="<%= image.image %>" alt="<%= image.imageAlt %>" />
+	<div class="overlay__image-text--container">
+		<h3 class="overlay__image-heading">
+			<%= image.imageHeading %>
+		</h3>
+	</div>
+	<% if(currentUser && currentUser.isAdmin) { %>
+	<div class="overlay__edit--container container">
+		<form class="overlay__edit-form" action="/gallery/<%= image._id %>/edit">
+			<button class="button" type="submit">Redaguoti</button>
+		</form>
+		<form class="overlay__edit-form" method="POST" action="/gallery/<%= image._id %>?_method=DELETE">
+			<button class="button" type="submit">Ištrinti</button>
+		</form>
+	</div>
+	<% } %>
+</a>
+<% }) %>

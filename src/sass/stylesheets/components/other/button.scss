@@ -1,0 +1,25 @@
+.button {
+	margin-top: 3rem;
+	width: 35rem;
+	height: 5rem;
+	background-color: $color-black;
+	color: $color-white;
+	border: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.7rem;
+	letter-spacing: 0.1rem;
+	cursor: pointer;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.3rem;
+
+	@include medium {
+		margin-top: 2rem;
+	}
+	@include small {
+		width: 100%;
+		margin-top: 1rem;
+	}
+}

@@ -1,0 +1,51 @@
+.login {
+	&--container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+		height: 100%;
+	}
+
+	&__text-input {
+		margin-bottom: 2rem;
+		text-align: center;
+		border: 0.1rem solid $color-black;
+		font-family: 'Montserrat', sans-serif;
+		width: 100%;
+		height: 4.5rem;
+		font-size: $base-font-size;
+
+		&:last-of-type {
+			margin-bottom: -1rem;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 35rem;
+	}
+
+	@include medium {
+		&__text-input {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@include small {
+		&__form {
+			width: 100%;
+		}
+
+		&__text-input {
+			&:last-of-type {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}

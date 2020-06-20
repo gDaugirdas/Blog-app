@@ -1,0 +1,60 @@
+.primary {
+	&__heading {
+		font-size: $header-font-size;
+		text-align: center;
+		font-weight: $font-weight-light;
+		letter-spacing: $header-letter-spacing;
+
+		&--container {
+			padding-top: 2rem;
+			padding-bottom: 3rem;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+	}
+
+	@include medium {
+		&__heading {
+			font-size: $header-font-size-md;
+		}
+	}
+
+	@include small {
+		&__heading {
+			font-size: $header-font-size-sm;
+
+			&--container {
+				padding-top: 2rem;
+				padding-bottom: 2rem;
+			}
+		}
+	}
+}
+
+.secondary {
+	&__heading {
+		font-size: $secondary-heading-font-size;
+		padding-bottom: 3rem;
+		letter-spacing: 0.1rem;
+		text-align: center;
+	}
+}
+
+.tertiary {
+	&__heading {
+		text-align: center;
+		font-size: 3.4rem;
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+
+		@include medium {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+
+		@include small {
+			font-size: 2.6rem;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+.about {
+	&__author {
+		&--container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 4rem;
+			padding-bottom: 2rem;
+		}
+
+		&-text {
+			&--container {
+				width: 56%;
+				text-align: center;
+				margin: 0 auto;
+			}
+		}
+
+		&-paragraph {
+			font-size: $paragraph-font-size;
+			padding-bottom: 2rem;
+			letter-spacing: $paragraph-letter-spacing;
+		}
+	}
+
+	@include medium {
+		&__author {
+			&--container {
+				flex-direction: column-reverse;
+				text-align: center;
+				padding-top: 2rem;
+			}
+
+			&-text {
+				&--container {
+					width: 90%;
+				}
+			}
+		}
+	}
+}

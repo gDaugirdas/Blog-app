@@ -1,0 +1,71 @@
+.comment {
+	&--container {
+		padding-top: 4rem;
+		padding-bottom: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__body {
+		&--container {
+			display: flex;
+			justify-content: space-between;
+			border-bottom: 0.2rem solid black;
+			padding-top: 1.4rem;
+			padding-bottom: 1.4rem;
+			width: 100%;
+
+			&:nth-of-type(1) {
+				padding-top: 0;
+			}
+		}
+	}
+
+	&__delete {
+		&-form {
+			justify-self: flex-end;
+
+			&--container {
+				padding-left: 1rem;
+			}
+		}
+	}
+
+	&__heading {
+		font-size: 3.4rem;
+		font-weight: $font-weight-bold;
+	}
+
+	&__name {
+		font-size: 2rem;
+		padding-bottom: 1rem;
+		font-weight: $font-weight-bold;
+	}
+
+	&__text {
+		font-size: $base-font-size;
+		padding-bottom: 1rem;
+		word-break: break-word;
+	}
+
+	&__date {
+		font-size: 1.2rem;
+	}
+
+	@include medium {
+		&--container {
+			padding-top: 13rem;
+		}
+	}
+
+	@include small {
+		&__heading {
+			text-align: center;
+			font-size: 2.6rem;
+		}
+		&--container {
+			padding-top: 2rem;
+			align-items: center;
+		}
+	}
+}
