@@ -7,8 +7,9 @@ const express = require('express'),
 	flash = require('connect-flash'),
 	LocalStrategy = require('passport-local');
 port = 3000;
-(sassMiddleware = require('node-sass-middleware')), (User = require('./models/user'));
-(Blog = require('./models/blog')),
+(sassMiddleware = require('node-sass-middleware')),
+	(User = require('./models/user')),
+	(Blog = require('./models/blog')),
 	(Gallery = require('./models/gallery')),
 	(Comment = require('./models/comment')),
 	(Email = require('./models/email')),
@@ -34,9 +35,10 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useFindAndModify', false);
 
-mongoose.connect('mongodb://localhost/koala_blog_app');
+// CONNECT TO LOCAL DATABASE OR A CLUSTER
 
-// Connect to local database or a cluster
+// connect to local database
+mongoose.connect('mongodb://localhost/koala_blog_app');
 
 // connect to a cluster
 // mongoose
@@ -50,9 +52,6 @@ mongoose.connect('mongodb://localhost/koala_blog_app');
 // 	.catch((err) => {
 // 		console.log('ERROR', err.message);
 // 	});
-
-// connect to local database
-// mongoose.connect('<<local DB link>>')
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
