@@ -19,3 +19,5 @@ Set nodemailer parameters for blog subsciption service
 
 * Set subsciption e-email message and email parameters for new blog post notification in project middleware/subscription.js directory.
 * Set new subscriber notification message and email parameters in project routes/email.js directory.
+
+Check out running project at: http://koalablogger.herokuapp.com/blogs
