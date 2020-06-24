@@ -6,7 +6,6 @@ router.get('/about', (req, res) => {
 	res.render('about', {
 		pageTitle: 'Apie Koala Blog',
 		pageDescription: 'Puslapis tinklaraštį ir jo autorių',
-		ogImage: './logo.png',
 	});
 });
 
@@ -16,7 +15,6 @@ router.use((req, res) => {
 	res.render('404', {
 		pageTitle: 'Puslapis nerastas',
 		pageDescription: 'Puslapis nerastas',
-		ogImage: './logo.png',
 	});
 });
 

@@ -1,3 +1,4 @@
+<% if(blogs !== null) { %>
 <% blogs.reverse().forEach(blog => { %>
 <article class="index__article">
     <a class="index__article-link" href="/blogs/<%= blog._id %> ">
@@ -12,3 +13,4 @@
     </a>
 </article>
 <% }) %>
+<% } %>

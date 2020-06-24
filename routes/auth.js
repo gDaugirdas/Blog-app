@@ -8,7 +8,6 @@ router.get('/register', (req, res) => {
 	res.render('register', {
 		pageTitle: 'Registracija',
 		pageDescription: 'Sukurk naują paskyrą!',
-		ogImage: './logo.png',
 	});
 });
 
@@ -16,7 +15,7 @@ router.get('/register', (req, res) => {
 router.post('/register', (req, res) => {
 	const newUser = new User({ username: req.body.username });
 	//If req.body.adminCode value matches the below string, make user an admin
-	if (req.body.adminCode === '<<CODETOBECOMEANADMIN>>') {
+	if (req.body.adminCode === 'dariusnx') {
 		newUser.isAdmin = true;
 	}
 	User.register(newUser, req.body.password, (err, user) => {
@@ -34,7 +33,6 @@ router.get('/login', (req, res) => {
 	res.render('login', {
 		pageTitle: 'Prisjungimas',
 		pageDescription: 'Prisijunk prie savo paskyros!',
-		ogImage: './logo.png',
 	});
 });
 

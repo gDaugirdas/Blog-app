@@ -20,7 +20,6 @@ router.get('/blogs', (req, res) => {
 				blogs: allBlogs,
 				pageTitle: 'Koala Blog',
 				pageDescription: 'Sveiki atvykę į Koalos tinkaraštį, čia rašau apie viską kas man šauną į galvą',
-				ogImage: allBlogs[0].blogImage,
 			});
 		}
 	});
@@ -31,7 +30,6 @@ router.get('/blogs/new', middlewareAdminAuth.checkAdminPrivilige, (req, res) => 
 	res.render('blog/new', {
 		pageTitle: 'Naujas tinklaraščio įrašas',
 		pageDescription: 'Pridėk naują Koalos tinklaraščio įrašą!',
-		ogImage: './logo.png',
 	});
 });
 
@@ -43,7 +41,7 @@ router.post('/blogs', middlewareAdminAuth.checkAdminPrivilige, middlewareSubscri
 			res.render('blog/new');
 		} else {
 			req.flash('success', 'Naujas tinklaraščio įrašas sėkmingai sukurtas!');
-			res.redirect('/blogs');
+			res.redirect('/blogs/' + newBlog._id);
 		}
 	});
 });
@@ -68,7 +66,6 @@ router.get('/blogs/:id', (req, res) => {
 							helpers: helpers,
 							pageTitle: foundBlog.title,
 							pageDescription: foundBlog.titleHeading,
-							ogImage: foundBlog.blogImage,
 						});
 					}
 				})
@@ -89,7 +86,6 @@ router.get('/blogs/:id/edit', middlewareAdminAuth.checkAdminPrivilige, (req, res
 				blog: foundBlog,
 				pageTitle: 'Redaguok ' + foundBlog.title,
 				pageDescription: 'Tinklaraščio įrašo ' + foundBlog.titleHeading + ' redagavimo puslapis',
-				ogImage: foundBlog.blogImage,
 			});
 		}
 	});

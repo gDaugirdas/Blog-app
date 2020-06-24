@@ -14,7 +14,6 @@ router.get('/gallery', (req, res) => {
 				images: allImages,
 				pageTitle: 'Nauotrauku galerija',
 				pageDescription: 'Nuostabūs vaizdai užfiksuoti mano gyvenime',
-				ogImage: allImages[0].image,
 			});
 		}
 	});
@@ -25,7 +24,6 @@ router.get('/gallery/new', middlewareAdminAuth.checkAdminPrivilige, (req, res) =
 	res.render('gallery/new', {
 		pageTitle: 'Nauja nuotrauka',
 		pageDescription: 'Pridėk naują nuotrauką',
-		ogImage: './logo.png',
 	});
 });
 
@@ -53,7 +51,6 @@ router.get('/gallery/:id/edit', middlewareAdminAuth.checkAdminPrivilige, (req, r
 				image: foundImage,
 				pageTitle: 'Redaguok nuotrauką',
 				pageDescription: 'Nuotraukos redagavimo puslapis',
-				ogImage: foundImage.image,
 			});
 		}
 	});
