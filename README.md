@@ -7,7 +7,7 @@ Tools and dependencies
 Run project
 
 * Connect the project to a databse in app.js file (line 38 - 54)
-* From root folder in terminal run gulp (this command runs gulp development server)
+* From root folder in terminal run "gulp" (this command runs gulp development server)
 * Open http://localhost:3000/
 
 Set blog admin priviliges
