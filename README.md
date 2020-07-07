@@ -1,3 +1,16 @@
+Technologies used for the project
+
+Front-End
+
+* HTML
+* SCSS
+* Javascript
+
+Back-End
+
+* Express.js
+* Node.js
+
 Tools and dependencies
 
 * GULP is used for assets compiling and bundling.
@@ -19,5 +32,7 @@ Set nodemailer parameters for blog subsciption service
 
 * Set subsciption e-email message and email parameters for new blog post notification in project middleware/subscription.js directory.
 * Set new subscriber notification message and email parameters in project routes/email.js directory.
+
+Project is optimized for Chrome and Firefox browsers.
 
 Check out running project at: http://koalablogger.herokuapp.com/blogs
